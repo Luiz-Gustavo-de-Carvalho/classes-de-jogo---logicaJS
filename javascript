@@ -34,16 +34,19 @@ Ao final deve se exibir uma mensagem:
   ex: mago atacou usando magia
   guerreiro atacou usando espada -->
 
-class (heroi){
+
+<!-- Desafio escrevendo as classes de um jogo  -->
+
+class Heroi{
     constructor(nome,idade,tipo){
     this.nome = nome;
     this.idade= idade;
     this.tipo= tipo;
  }
- function atacar()
- let ataque; 
 
-}
+
+atacar(){
+ let ataque; 
 
 switch(this.tipo) {
     case "mago":
@@ -51,16 +54,20 @@ switch(this.tipo) {
     break;
      case "guerreiro":
         ataque = "usou espada";
-    break; case "monge":
+    break; 
+    case "monge":
         ataque = "usou artes marciais";
-    break; case "ninja":
+    break;
+    case "ninja":
         ataque = "usou shuriken";
     break;
     default:
         ataque = "usou um ataque indefinido";
 }
+console.log(`O ${this.tipo} atacou usando ${ataque}`);
 
-console.log('O ${this.tipo} atacou usando ${ataque}');
+    }
+    }
 
 const heroi1= new Heroi("Heroi1",25, "mago");
 const heroi2 = new Heroi("Heroi2",30, "guerreiro");
